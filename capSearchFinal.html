@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:rows="http://www.w3.org/1999/xhtml" xmlns:cols="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Title</title>
+</head>
+
+<label id = "packageLabel" data-valueid = "help"> Package: </label>
+<br>
+<select id="package" parameterId = 16 onchange = formatCookies("package")>
+    <option value = "0201" valueid="39078">0201</option>
+    <option value = "0402" valueid="39158">0402</option>
+    <option value = "0603" valueid="39246">0603</option>
+</select>
+<br>
+<br>
+
+
+<label id = "diLabel"> Temperature Coefficient: </label>
+<br>
+<select id="di" parameterId = 14 onchange = formatCookies("di")>
+    <option value = "C0G/NP0" valueid = "324183">C0G/NP0</option>
+    <option value = "X5R" valueid = "422407">X5R</option>
+    <option value = "X7R" valueid = "422415">X7R</option>
+</select>
+<br>
+<br>
+
+
+<label id = "infoLabel"> Information to get: </label>
+<br>
+<select id = "info">
+    <option value="All">All</option>
+    <option value="Name">Name</option>
+    <option value="DetailedDescription">Detailed Description</option>
+    <option value="Tolerance">Tolerance</option>
+    <option value="MinTemp">Min Temp</option>
+    <option value="MaxTemp">Max Temp</option>
+    <option value="Height">Height</option>
+    <option value="Value">Value</option>
+    <option value="DigiKeyPartNumber1">Digi-Key Part Number 1</option>
+    <option value="DigiKeyPartNumber2">Digi-Key Part Number 2</option>
+    <option value="DigiKeyPartNumber3">Digi-Key Part Number 3</option>
+    <option value="ItemReport">Number of Available Options</option>
+</select>
+<br>
+<br>
+<br>
+
+<button id = "go", style="font-size: 15pt; height: 30px; width: 200px">Go!</button>
+<br><br>
+<label id = "outputLabel">Output: </label>
+<br>
+<textarea id = "output", rows= "40", cols= "50"; wrap = off style =  'overflow: scroll;' readonly></textarea>
+<br>
+<input id = "toggleIndex" type = "checkbox">
+<label id = "toggleIndexLabel">Index?</label>
+<br>
+<input id = "toggleReal" type = "checkbox" checked = true>
+<label id = "toggleRealLabel">Only Real Values?</label>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    document.write('<script src = "capSearch2.js?' + Date.now() + '"><' + '/script>'); //Cache busting for development
+</script>
+
+</html>
+
